@@ -24,7 +24,7 @@ try {
 	VBE = new ActiveXObject("ScriptControl");
 	VBE.Language = "VBScript";
 } catch (e) {
-	PopMessage(0, "Can not create ActiveX object (ScriptControl), some functions are not available.\nPlease check your system authorities.", 1);
+	//PopMessage(0, "Can not create ActiveX object (ScriptControl), some functions are not available.\nPlease check your system authorities.", 1);
 }
 
 function PopMessage(method, text, type) {

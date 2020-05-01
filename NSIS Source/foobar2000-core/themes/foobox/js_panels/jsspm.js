@@ -27,8 +27,13 @@ function arrayContains(array, name) {
 	return false;
 }
 
-var vbs = new ActiveXObject("ScriptControl");
-vbs.Language = "VBScript";
+var vbs;
+try {
+	vbs = new ActiveXObject("ScriptControl");
+	vbs.Language = "VBScript";
+} catch (e) {
+	// PopMessage(0, "Can not create ActiveX object (ScriptControl), some functions are not available.\nPlease check your system authorities.", 1);
+}
 
 function MsgBox(prompt, buttones, title) {
 	prompt = prompt.replace(/"/g, '" + Chr(34) + "');
